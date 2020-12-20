@@ -1,0 +1,40 @@
+.regi{
+    margin: auto;
+
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid red;
+    margin-top: 8px;
+    background-image: linear-gradient(to right,#005,#999);
+}
+
+input {
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+    padding: 8px;
+    margin: 12px 10px;
+    font-size: 25px;
+    font-family: cursive;
+}
+
+h2{
+    
+    text-align: center;
+    font-size: 30px;
+
+}
+
+input[type="submit"]
+{
+    cursor:pointer
+}
+input[type="reset"]
+{
+    cursor:pointer
+}

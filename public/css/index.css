@@ -1,0 +1,81 @@
+*{margin: 0;
+padding: 0;}
+
+nav{
+
+width: 100%;
+background-image: linear-gradient(to right,#563,#913);
+height: 80px;
+position: sticky;
+top: 0px;
+z-index: 1;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    float: right;
+}
+nav ul li {
+    margin: 20px;
+    padding: 5px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: red;
+    letter-spacing: 2px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    
+}
+nav ul li a:hover{
+    color: tomato;
+    font-size: 25px;
+    letter-spacing: 0px;
+
+}
+
+.toggle{
+    width: 100%;
+    /* height: 10px; */
+    display: flex;
+    flex-direction: column;
+    float: right;
+    clear: left;
+    color:blue;
+    background-color: yellow;
+    cursor: pointer;
+    display: none;
+}
+
+@media (max-width:676px)
+{
+    .toggle{
+        display: block;
+    }
+    nav {
+        display: none;
+        height: 450px;
+        top: 10px;
+    }
+    nav ul{
+        flex-direction: column;
+    }
+}
+.img{
+    background-image: url(./../../akson-1K8pIbIrhkQ-unsplash.jpg);
+    width: 100%;
+    height: 400px;
+    background-size: cover;
+    text-align: center;
+    margin-top: 5px;
+}
+#admin{
+    position: relative;
+    top: 25px;
+    font-size: 45px;
+    margin-top: 0px;
+    color: teal;
+    font-family: sans-serif;
+
+}

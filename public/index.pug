@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title #{title}
+        style
+            include ../public/css/index.css
+            include ../public/css/register.css
+
+
+    
+
+    body
+        -var value = value
+
+        if(value)
+
+            -var link = link
+        else 
+            -var link = link
+
+        .toggle Click Here
+        nav
+            ul
+              li
+                a(href="/") Home
+              li
+                a(href="/" + link) #{currentlink}
+              li
+                a(href="/login") Login
+              li
+                a(href="/logout") Log Out
+              li
+                a(href="/") About
+
+        .img
+            h1#admin Hello Admin
+
+        if(value)
+            .regi
+                h2 Registration Form
+                form(action="/profile", method="post" enctype="multipart/form-data")
+                    label(for="name") Name
+                    input(type="text" name="name" id="name" required)
+                    label(for="password") Password
+                    input(type="password" name="password" id="password" required)
+                    label(for="cnfpassword") Confirm Password
+                    input(type="password" name="cnfpassword" id="cnfpassword" required)
+                    label(for="email") Email
+                    input(type="email" name="email" id="email" required)
+                    label(for="email") Image
+                    input(type="file", name="avtar" id="img"  required)
+                    input(type="submit", value="Register")
+                    input(type="reset", value="Reset")
+        else
+            .regi
+                h2 Log in
+                form(action="/okdone", method="post")
+                    label(for="email") Email
+                    input(type="email" name="email" id="email" required)
+                    label(for="password") Password
+                    input(type="password" name="password" id="password" required)
+                    input(type="submit", value="Log in")
+
+
