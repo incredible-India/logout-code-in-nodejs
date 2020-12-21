@@ -141,7 +141,7 @@ app.post('/okdone', async (req, res) => {
 
     if (await bcryptjs.compareSync(req.body.password, login.password)) {
         res.cookie('jwt', token)
-        return res.send("welcome")
+        return res.redirect('/showdata')
     } else {
         return res.send('incoorect id or password please try again')
     }
@@ -154,7 +154,13 @@ app.post('/okdone', async (req, res) => {
 
 app.get('/showdata', auth, async (req, res, next) => {
 
-    res.send("aha")
+    res.render('profile',{
+        name:req.users.name,
+        password:req.users.password,
+        email: req.users.email,
+        contentType:req.users.img.contentType,
+        imgdata:req.users.img.data
+    })
 
 })
 

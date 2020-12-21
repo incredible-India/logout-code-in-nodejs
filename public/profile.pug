@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Profile
+        style 
+            include ./css/profile.css
+    body
+        h1 Profile info
+        -var ctype =contentType
+        -var data = imgdata
+        .img
+            img(src="data:" + ctype + ";" + 'base64' + "," + data.toString('base64'), alt="userimage")
+        .details
+            h2 Name : #{name}
+            h2 Email : #{email}
+            h2 Password : #{password}
+        .link
+            a(href="/") Home
+            a(href="/logout") Logout
